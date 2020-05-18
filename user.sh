@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd `dirname ${BASH_SOURCE[0]}`
+cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 
 . wg.def
 CLIENT_TPL_FILE=client.conf.tpl
